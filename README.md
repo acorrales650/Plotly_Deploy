@@ -2,7 +2,9 @@
 
 ### Purpose & Usage
 
-Webpage dedicated to displaying the results of a study done on the bacterial cultures of the belly buttons of test subjects. 
+Webpage https://acorrales650.github.io/Plotly_Deploy/ 
+
+Dedicated to displaying the results of a study done on the bacterial cultures of the belly buttons of test subjects. 
 
 When the page first loads, it shows the first test subject no as '940' and all of the diagrams are showing test subject 940's respective results.
 There is a bar chart that shows the 'Top 10 Bacteria Cultures Found', a gauge chart showing 'The Belly Button Washing Frequency: Scrubs per Week', and a bubble chart showing 'Bacteria Cultures per Sample.'
