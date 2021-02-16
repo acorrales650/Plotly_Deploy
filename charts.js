@@ -84,7 +84,7 @@ function init() {
       console.log(allBacteria)
       var OTU_ids_Ten = allBacteria.otu_ids.slice(0,10);
       var OTULabels_Ten = allBacteria.otu_labels.slice(0,10).reverse();
-      var sampleValues_Ten = allBacteria.sample_values.slice(0, 10).reverse();
+      var sampleValues_Ten = allBacteria.sample_values.slice(0,10).reverse();
       
   
       var yticks = OTU_ids_Ten.map(num => "OTU" + num).reverse();
@@ -107,9 +107,7 @@ function init() {
       // 9. Create the layout for the bar chart. 
       var barLayout = {
         title:  {text: "<b>Top 10 Bacteria Cultures Found</b>"},
-        font: {family: "calibri"},
-        height: 420,
-        width: 480
+        font: {family: "tahoma"},
       };
   
       // 10. Use Plotly to plot the data with the layout. 
@@ -143,7 +141,7 @@ function init() {
           title:"<b>OTU ID</b>"},
         height: 600, 
         width: 1150,
-        font: {family: "calibri"},
+        font: {family: "tahoma"},
       };
   
       // 3. Use Plotly to plot the data with the layout.
@@ -193,7 +191,7 @@ function init() {
       // 5. Create the layout for the gauge chart.
       var gaugeLayout = { 
         width: 480, height: 420, margin: { t: 10, b: 10, r: 5, l: 5},
-        font: {family: "calibri"}
+        font: {family: "tahoma"}
       };
   
       // 6. Use Plotly to plot the gauge data and layout.
