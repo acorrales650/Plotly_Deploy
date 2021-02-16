@@ -141,7 +141,13 @@ function init() {
   
   
       // -- Deliverable 3 -- //
-      // D3: 1-3. Use Plotly to plot the data with the layout.
+    // Create a variable that holds the samples array. 
+    // Create a variable that filters the samples for the object with the desired sample number.
+    // 1. Create a variable that filters the metadata array for the object with the desired sample number.
+    // Create a variable that holds the first sample in the array.
+    // 2. Create a variable that holds the first sample in the metadata array.
+    // Create variables that hold the otu_ids, otu_labels, and sample_values.
+    // 3. Create a variable that holds the washing frequency.
       var metaData_All = sampledata.metadata
       //console.log(metaData_All)
       var SampleMetaData = metaData_All.filter(sampleObj => sampleObj.id == sample);
