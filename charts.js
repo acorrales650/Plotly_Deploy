@@ -53,6 +53,7 @@ function init() {
     });
   }
   
+      // -- Deliverable 1 -- //
   // 1. Create the buildCharts function.
   function buildCharts(sample) {
     // 2. Use d3.json to load and retrieve the samples.json file 
@@ -114,7 +115,7 @@ function init() {
       Plotly.newPlot('bar', [trace], barLayout);
       
   
-      // ----- challenge part 2 ------//
+      // -- Deliverable 2 -- //
       // 1. Create the trace for the bubble chart.
       var  trace2 ={
         x: sampleOTU_ids,
@@ -148,7 +149,7 @@ function init() {
       Plotly.newPlot('bubble', bubbleData, bubbleLayout);
   
   
-      // --------- Challenge Part 3 -------- //
+      // -- Deliverable 3 -- //
       // D3: 1-3. Use Plotly to plot the data with the layout.
       var metaData_All = sampledata.metadata
       //console.log(metaData_All)
