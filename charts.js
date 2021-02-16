@@ -60,40 +60,31 @@ function init() {
     d3.json("samples.json").then((sampledata) => {
       // 3. Create a variable that holds the samples array. 
       var samplesArray = sampledata.samples;
-      //console.log(sampledata);
     
       // 4. Create a variable that filters the samples for the object with the desired sample number.
       var samples = samplesArray.filter(sampleObj => sampleObj.id == sample);
-      //console.log(samples)
+
       //  5. Create a variable that holds the first sample in the array.
-  
+      var sampleOTU_array = samples[0];  
       // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
-      var sampleOTU_array = samples[0];
       var sampleOTU_ids = sampleOTU_array.otu_ids;
-      //console.log(sampleOTU_ids);
       var sampleOTU_labels = sampleOTU_array.otu_labels;
-      //console.log(sampleOTU_labels);
       var sampleSample_values = sampleOTU_array.sample_values;
-      //console.log(sampleSample_values);
   
       // 7. Create the yticks for the bar chart.
       // Hint: Get the the top 10 otu_ids and map them in descending order  
       //  so the otu_ids with the most bacteria are last. 
       var bacteriaAll = samples.sort((a ,b) => a.sample_values - b.sample_values).reverse();
-      //console.log(bacteriaAll);
       var allBacteria = bacteriaAll[0];
       console.log(allBacteria)
       var OTU_ids_Ten = allBacteria.otu_ids.slice(0,10);
       var OTULabels_Ten = allBacteria.otu_labels.slice(0,10).reverse();
       var sampleValues_Ten = allBacteria.sample_values.slice(0,10).reverse();
-      
-  
       var yticks = OTU_ids_Ten.map(num => "OTU" + num).reverse();
       console.log(yticks);
       console.log(sampleValues_Ten);
       console.log(OTULabels_Ten);
-      //sampleValues_Ten.map(num => parseInt(num))
-      //console.log(yticks);
+
       // 8. Create the trace for the bar chart. 
   
       var trace = {
@@ -154,9 +145,6 @@ function init() {
       var metaData_All = sampledata.metadata
       //console.log(metaData_All)
       var SampleMetaData = metaData_All.filter(sampleObj => sampleObj.id == sample);
-      //console.log(SampleMetaData)
-      //console.log(sampledata)
-      // convert wash freq to floating point number
       sampleMetaData = SampleMetaData[0];
       wfreq = parseFloat(sampleMetaData.wfreq);
       console.log(wfreq);
